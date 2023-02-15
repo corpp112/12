@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <style>
+      /* Navigation bar styles */
+      .sidenav {
+        height: 100%;
+        width: 200px;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: -200px;
+        background-color: black;
+        overflow-x: hidden;
+        padding-top: 20px;
+        transition: left 0.5s ease;
+      }
+
+      .sidenav a {
+        padding: 10px 8px 10px 16px;
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+        display: block;
+      }
+
+      .sidenav a:hover {
+        background-color: white;
+        color: black;
+      }
+
+      /* Toggle button styles */
+      .toggle-button {
+        position: fixed;
+        z-index: 1;
+        top: 20px;
+        right: 20px;
+        font-size: 24px;
+        color: white;
+        background-color: black;
+        border: none;
+        cursor: pointer;
+      }
+
+      /* Centered text styles */
+      .centered {
+        font-size: 48px;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+        margin-top: 20%;
+      }
+
+      /* Subtitle styles */
+      .subtitle {
+        font-size: 24px;
+        font-family: 'Courier New', monospace;
+        text-align: center;
+        margin-top: 1%;
+      }
+
+      /* Sign up button styles */
+      .signup-button {
+        display: block;
+        margin: auto;
+        margin-top: 1%;
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <button class="toggle-button" onclick="toggleNav()">☰</button>
+    <div class="sidenav" id="mySidenav">
+      <a href="#">Home</a>
+      <a href="About.html">About</a>
+      <a href="#">Contact</a>
+    </div>
+    <div class="centered">Welcome to JB Unblocker</div>
+    <p class="subtitle">Our website helps you access blocked content online</p>
+    <button class="signup-button" onclick="openSignUpForm()">Sign Up</button>
+    <script>
+      function toggleNav() {
+        var sidenav = document.getElementById("mySidenav");
+        if (sidenav.style.left === "-200px") {
+          sidenav.style.left = "0";
+        } else {
+          sidenav.style.left = "-200px";
+        }
+      }
+
+      function openSignUpForm() {
+        window.location.href = "signup.html";
+      }
+    </script>
+  </body>
+</html>
